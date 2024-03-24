@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+        var a = 0, ch;
+        function getdata(str) {
+            document.getElementById("ed").value += str
+        }
+        function getopr(s) {
+            a = parseInt(document.getElementById("ed").value);
+            document.getElementById("ed").value = " ";
+            ch = s;
+        }
+        function getres() {
+            var b = parseInt(document.getElementById("ed").value);
+            var c = 0;
+            if (ch == '+')
+                c = a + b;
+            if (ch == '-')
+                c = a - b;
+            if (ch == '*')
+                c = a * b;
+            if (ch == '/')
+                c = a / b;
+            document.getElementById("ed").value = c;
+        }
+        function cl() {
+            document.getElementById("ed").value = "";
+        }
+
+    </script>
+</head>
+
+<body style="background-image: url(pexels-pixabay-207983.jpg); background-size: cover; "><br><br><br>
+    <marquee onmouseover="stop()" onmouseout="start()">
+        <div
+            style="border:3px solid rgb(2, 2, 22); width:320px; padding:20px ;background-image: url(wp4433454-dark-tv-series-wallpapers.jpg); background-size: cover; ">
+            <center>
+                <h1 style="font-size: 38px; color: rgb(243, 242, 247);">Calculator</h1>
+
+
+
+
+                <input type="text" id="ed" style=" height: 32px; width: 205px;" >&emsp;
+                <input type="button" value="clr" onclick="cl()" style="height: 41px; width: 43px; font-size: 29px;">
+                <br><br>
+                <input type="button" value="1" onclick="getdata(this.value)"
+                    style="font-size: 30px; height: 40px; width: 35px;">&emsp;
+                <input type="button" value="2" onclick="getdata(this.value)"
+                    style="font-size: 30px; height: 40px; width: 35px;">&emsp;
+                <input type="button" value="3" onclick="getdata(this.value)"
+                    style="font-size: 30px;height: 40px; width: 35px; ">&emsp;
+                <input type="button" value="+" onclick="getopr('+')"
+                    style="font-size: 30px;height: 40px; width: 35px; "><br><br>
+                <input type="button" value="4" onclick="getdata(this.value)"
+                    style="font-size: 30px;height: 40px; width: 35px; ">&emsp;
+                <input type="button" value="5" onclick="getdata(this.value)"
+                    style="font-size: 30px;height: 40px; width: 35px; ">&emsp;
+                <input type="button" value="6" onclick="getdata(this.value)"
+                    style="font-size: 30px;height: 40px; width: 35px; ">&emsp;
+                <input type="button" value="-" onclick="getopr('-')"
+                    style="font-size: 30px;height: 40px; width: 35px; "><br><br>
+                <input type="button" value="7" onclick="getdata(this.value)"
+                    style="font-size: 30px;height: 40px; width: 35px; ">&emsp;
+                <input type="button" value="8" onclick="getdata(this.value)"
+                    style="font-size: 30px;height: 40px; width: 35px; ">&emsp;
+                <input type="button" value="9" onclick="getdata(this.value)"
+                    style="font-size: 30px;height: 40px; width: 35px; ">&emsp;
+                <input type="button" value="*" onclick="getopr('*')"
+                    style="font-size: 30px;height: 40px; width: 35px; "><br><br>
+                <input type="button" value="." onclick="getdata(this.value)"
+                    style="font-size: 30px;height: 40px; width: 35px; ">&emsp;
+                <input type="button" value="0" onclick="getdata(this.value)"
+                    style="font-size: 30px;height: 40px; width: 35px; ">&emsp;
+                <input type="button" value="=" onclick="getres()"
+                    style="font-size: 30px;height: 40px; width: 35px;">&emsp;
+                <input type="button" value="/" onclick="getopr('/')"
+                    style="font-size: 30px;height: 40px; width: 35px; "><br><br>
+
+            </center>
+        </div>
+    </marquee>
+
+
+
+
+</body>
+
+</html>
